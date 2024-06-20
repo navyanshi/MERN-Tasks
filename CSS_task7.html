@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(179, 24, 107); 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .outer-box {
+            background-color: rgb(138, 6, 72);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+        }
+
+        .inner-box {
+            background-color: burgundy;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            flex-direction: column; /* Stack form groups vertically */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        .form-group label {
+            width: 120px;
+            text-align: right;
+            margin-right: 10px;
+            margin-bottom: 0; /* Remove default margin */
+        }
+
+        .form-group input,
+        .form-group select {
+            flex: 1; /* Take remaining space */
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px; /* Add spacing between radio buttons and labels */
+        }
+
+        .form-group .inline-group {
+            display: flex;
+            align-items: center; /* Align radio buttons vertically */
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(255, 255, 255);
+            color: black; /* Change font color to black */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="outer-box">
+    <div class="inner-box">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <label>Phone number:</label>
+            <input type="text" name="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="inline-group">
+                <input type="radio" name="gender" value="male">
+                <label>Male</label>
+                <input type="radio" name="gender" value="female">
+                <label>Female</label>
+                <input type="radio" name="gender" value="other">
+                <label>Other</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Language:</label>
+            <select name="language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Zip code:</label>
+            <input type="text" name="zip" placeholder="Enter your zip code">
+        </div>
+        <div class="form-group">
+            <label>About:</label>
+            <input type="text" name="about" placeholder="Write about yourself">
+        </div>
+        <button class="register-button">Register</button>
+    </div>
+</div>
+
+</body>
+</html>

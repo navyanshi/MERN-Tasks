@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoverable Side Nav Buttons</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0; /* Body background color for contrast */
+        overflow-x: hidden; /* Hide horizontal overflow to prevent scrollbars */
+    }
+
+    h1 {
+        text-align: left;
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+
+    p {
+        text-align: left;
+        margin-bottom: 40px;
+        margin-left: 60px;
+    }
+
+    /* Vertical Navigation Bar */
+    .vertical-nav {
+        position: fixed; /* Fixed position to keep it on the side */
+        top: 0;
+        left: 0; /* Initially show the navigation bar */
+        width: 60px; /* Width of the navigation bar */
+        height: 100%; /* Full height */
+        background-color: transparent; /* Transparent background */
+        z-index: 2; /* Ensure it stays on top */
+    }
+
+    .vertical-nav a {
+        display: block;
+        width: 60px; /* Initial width of each button */
+        height: 60px; /* Height of each button */
+        color: white;
+        text-align: center;
+        line-height: 60px; /* Center content vertically */
+        text-decoration: none;
+        transition: width 0.3s, opacity 0.3s; /* Transition for width and opacity */
+    }
+
+    .vertical-nav .green {
+        background-color: green;
+    }
+
+    .vertical-nav .blue {
+        background-color: blue;
+    }
+
+    .vertical-nav .red {
+        background-color: red;
+    }
+
+    .vertical-nav .grey {
+        background-color: grey;
+    }
+
+    /* Hover effect to expand the buttons */
+    .vertical-nav a:hover {
+        width: 200px; /* Expand width on hover */
+        opacity: 0.9; /* Reduce opacity on hover */
+    }
+
+    /* Space between buttons */
+    .vertical-nav a + a {
+        margin-top: 10px; /* Spacing between buttons */
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Hoverable Side Nav Buttons</h1>
+<p>Hover over the buttons on the left side to expand them</p>
+
+<!-- Vertical Navigation Bar -->
+<div class="vertical-nav">
+    <a href="#" class="green"></a>
+    <a href="#" class="blue"></a>
+    <a href="#" class="red"></a>
+    <a href="#" class="grey"></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bars</title>
+<style>
+    /* Common styles for both vertical and horizontal nav */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Vertical Navigation Bar */
+    .vertical-nav {
+        background-color: #333;
+        width: 200px; /* Adjust width as needed */
+        position: fixed; /* Fixed position to keep it on the side */
+        height: 100%; /* Full height */
+        padding-top: 60px; /* Add space for the title */
+        color: white;
+        z-index: 2; /* Ensure it stays on top */
+    }
+
+    .vertical-nav-title {
+        background-color: #555; /* Different background color */
+        padding: 15px;
+        position: fixed;
+        width: 200px;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-weight: bold;
+        color: #FFD700; /* Different color for visibility */
+        z-index: 3; /* Ensure it stays on top */
+    }
+    
+    .vertical-nav a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .vertical-nav a:hover {
+        background-color: #555;
+    }
+    
+    /* Horizontal Navigation Bar */
+    .horizontal-nav {
+        background-color: #222; /* Different background color */
+        overflow: hidden;
+        width: calc(100% - 200px); /* Full width minus the vertical nav width */
+        margin-left: 200px; /* Align next to vertical nav */
+        padding-top: 60px; /* Add space for the title */
+    }
+
+    .horizontal-nav-title {
+        background-color: #333; /* Different background color */
+        padding: 15px;
+        position: fixed;
+        width: calc(100% - 200px);
+        top: 0;
+        left: 200px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        z-index: 1; /* Ensure it stays below vertical nav */
+    }
+    
+    .horizontal-nav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        border-right: 1px solid #555; /* Add divider between links */
+    }
+    
+    .horizontal-nav a:last-child {
+        border-right: none; /* Remove divider from last link */
+    }
+    
+    .horizontal-nav a:hover {
+        background-color: #555;
+    }
+    
+    /* Optional: To make it responsive */
+    @media screen and (max-width: 600px) {
+        .horizontal-nav {
+            width: 100%; /* Full width */
+            margin-left: 0; /* No margin */
+            padding-top: 0; /* Remove top padding for small screens */
+        }
+        
+        .vertical-nav {
+            width: 100%; /* Full width */
+            height: auto; /* Adjust height */
+            position: static; /* Reset position */
+            padding-top: 0; /* Remove top padding for small screens */
+        }
+
+        .horizontal-nav-title, .vertical-nav-title {
+            width: 100%; /* Full width */
+            left: 0; /* Align to left */
+            top: auto;
+            position: static;
+        }
+
+        .horizontal-nav a, .vertical-nav a {
+            float: none;
+            display: block;
+            text-align: left;
+            border-right: none; /* Remove divider on small screens */
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Vertical Navigation Bar Title -->
+<div class="vertical-nav-title">Vertical Navigation</div>
+
+<!-- Vertical Navigation Bar -->
+<div class="vertical-nav">
+    <a href="#">Home</a>
+    <a href="#">Java</a>
+    <a href="#">CSS</a>
+    <a href="#">HTML</a>
+    <a href="#">Bootstrap</a>
+</div>
+
+<!-- Horizontal Navigation Bar Title -->
+<div class="horizontal-nav-title">Horizontal Navigation</div>
+
+<!-- Horizontal Navigation Bar -->
+<div class="horizontal-nav">
+    <a href="#">Home</a>
+    <a href="#">Java</a>
+    <a href="#">CSS</a>
+    <a href="#">HTML</a>
+    <a href="#">Bootstrap</a>
+</div>
+
+</body>
+</html>
